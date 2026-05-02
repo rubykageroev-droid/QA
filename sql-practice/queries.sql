@@ -50,3 +50,13 @@ SELECT users.name, COUNT(orders.id), SUM(orders.total)
 FROM users
 LEFT JOIN orders ON users.id = orders.user_id
 GROUP BY users.name;
+
+
+SQL практика
+
+Написал 10+ запросов с использованием:
+- JOIN
+- GROUP BY
+- HAVING
+- агрегатных функций (COUNT, SUM, AVG)
+- фильтрации и сортировки
