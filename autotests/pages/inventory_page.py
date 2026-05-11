@@ -2,7 +2,7 @@ class InventoryPage:
     def __init__(self, page):
         self.page = page
         self.cart_icon = page.locator(".shopping_cart_link")
-        self.sort_dropdown = page.locator("[data-test='product_sort_container']")
+        self.sort_dropdown = page.locator(".product_sort_container")
         self.item_prices = page.locator(".inventory_item_price")
         self.burger_menu = page.locator("#react-burger-menu-btn")
         self.logout_link = page.locator("#logout_sidebar_link")
@@ -17,7 +17,6 @@ class InventoryPage:
         self.page.locator("[data-test='checkout']").click()
 
     def select_sort(self, option: str):
-        self.sort_dropdown.wait_for(state="visible")
         self.sort_dropdown.select_option(option)
 
     def logoutburger(self):
