@@ -113,6 +113,7 @@ def test_checkout_complete_full_flow(cart_ready_page):
 
 def test_sort_price_low_to_high(logged_in_page):
     """Сортировка товаров по цене: от низкой к высокой"""
+    logged_in_page.goto("https://www.saucedemo.com/inventory.html")
     inventory = InventoryPage(logged_in_page)
     inventory.select_sort("lohi")
 
@@ -124,6 +125,7 @@ def test_sort_price_low_to_high(logged_in_page):
 
 def test_sort_price_high_to_low(logged_in_page):
     """Сортировка товаров по цене: от высокой к низкой"""
+    logged_in_page.goto("https://www.saucedemo.com/inventory.html")
     inventory = InventoryPage(logged_in_page)
     inventory.select_sort("hilo")
 
@@ -139,6 +141,7 @@ def test_sort_price_high_to_low(logged_in_page):
 
 def test_logout_via_burger_menu(logged_in_page):
     """Выход из аккаунта через бургер-меню"""
+    logged_in_page.goto("https://www.saucedemo.com/inventory.html")
     inventory = InventoryPage(logged_in_page)
     inventory.logoutburger()
 
