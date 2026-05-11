@@ -21,11 +21,11 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install -r auto-tests/requirements.txt
+          pip install -r autotests/requirements.txt
           playwright install chromium
 
       - name: Run UI tests
-        run: pytest auto-tests/tests/test_ui.py -v
+        run: pytest autotests/tests/test_ui.py -v
 
       - name: Run API tests
-        run: pytest auto-tests/tests/test_api.py -v
+        run: pytest autotests/tests/test_api.py -v
